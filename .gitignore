@@ -2,4 +2,6 @@ venv/
 remoteUrl.txt
 config.py
 __pycache__/
+.vscode/
+
 
