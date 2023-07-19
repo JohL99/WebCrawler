@@ -2,5 +2,4 @@ venv/
 remoteUrl.txt
 config.py
 __pycache__/
-data.csv
 
