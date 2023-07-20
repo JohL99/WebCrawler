@@ -1,3 +1,9 @@
+# imports
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
 import csv
 import requests
 from bs4 import BeautifulSoup
@@ -18,7 +24,7 @@ def buildDictionary(productName, productPrice, mainDic):
     
 # write data to a file
 def write(url):
-    mainDic = scrape(url) # noqa: F405
+    mainDic = scrape(url)
     with open('data.csv', 'a', newline='') as f:
         f.write(url + '\n')
         writer = csv.writer(f)
@@ -26,14 +32,13 @@ def write(url):
             writer.writerow([key, value])
         f.write('\n' + "-"*15 + " end of section " + "-"*15 + '\n\n')
     f.close()
-
-# get the product names and prices from a website
+    
+# get the product names and prices from the website
 def scrape(url):
     
     mainDic = {}
     
     # Send a GET request to the website
-    #url = "https://www.africanhut.com/collections/confectionary"
     response = requests.get(url)
 
     # Parse the HTML content using BeautifulSoup
@@ -58,13 +63,6 @@ def scrape(url):
 
 # send file with email
 def sendEmail(sender_email, sender_password, receiver_email, subject, message, attachment_path):  # noqa: E501
-    # imports
-    import smtplib
-    from email.mime.multipart import MIMEMultipart
-    from email.mime.text import MIMEText
-    from email.mime.base import MIMEBase
-    from email import encoders
-    
     msg = MIMEMultipart()
     msg['From'] = sender_email
     msg['To'] = receiver_email

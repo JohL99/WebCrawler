@@ -3,10 +3,6 @@ import config as cf  # noqa: F403
         
     
 def main():
-    """ with open('urls.txt', 'r') as f:
-        for url in f:
-            write(url) # noqa: F405
-    f.close() """
     write("https://www.africanhut.com/collections/confectionary") # noqa: F405
     write("https://www.africanhut.com/collections/biscuits-cookies-and-snacks") # noqa: F405
     write("https://www.africanhut.com/collections/beverages") # noqa: F405
