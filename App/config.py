@@ -1,3 +1,5 @@
-senderEmail = "Sender@mail.com"
-SenderPassword = "Sender password here"
-receiverEmail = "Receives@mail.com"
+import os
+
+senderEmail = os.environ.get("SENDER_EMAIL")
+senderPassword = os.environ.get("SENDER_PASSWORD")
+receiverEmail = os.environ.get("RECEIVER_EMAIL")

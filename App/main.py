@@ -1,9 +1,12 @@
 from helpers import *  # noqa: F403
-import secret as cf  # noqa: F403
+import config as cf  # noqa: F403
+import os
+
 
 
 def main():
-    with open("urls.txt", "r") as f:
+    filePath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "urls.txt")
+    with open(filePath, "r") as f:
         for line in f:
             url = line.strip()
             write(url)  # noqa: F405
@@ -18,7 +21,7 @@ def main():
     - this is an automated email
     
     '''
-    sendEmail(cf.senderEmail, cf.SenderPassword, cf.receiverEmail, "Price List", message, "data.csv") # noqa: F405, E501
+    sendEmail(cf.senderEmail, cf.senderPassword, cf.receiverEmail, "Price List", message, "data.csv") # noqa: F405, E501
     print("Done")
     
 if __name__ == "__main__":

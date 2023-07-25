@@ -3,5 +3,7 @@ remoteUrl.txt
 __pycache__/
 .vscode/
 secret.py
+.env
+
 
 
