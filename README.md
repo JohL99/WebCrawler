@@ -3,14 +3,6 @@
 Web crawler will go through the AfricanHut product pages and extract the names and prices of the products.
 ## Usage
 
-### Standard
-
-1. Navigate to the folder `WebCrawler/` in the terminal 
-2. Run `pip install -r requirements.txt` from the directory WebCrawler
-3. Run `python App/main.py` from the directory WebCrawler
-
-### Docker
-
 1. Navigate to the folder `WebCrawler/` in the terminal 
 2. Run `docker build -t <image name here> .` from the directory WebCrawler
 3. Run `docker run --env-file .env test` from the directory WebCrawler
