@@ -9,11 +9,11 @@ Web crawler will go through the AfricanHut product pages and extract the names a
 
 ## Secrets
 
-In the `App` directory modify the file called `config.py` with the following data:
+In the `WebCrawler` directory create and modify a file called `.env` with the following data format:
 
-    senderEmail = <Your email here>
-    SenderPassword = <Your password here>
-    receiverEmail = <Receiver email here>
+    SENDER_EMAIL=sender@mail.com
+    SENDER_PASSWORD=password here
+    RECEIVER_EMAIL=receiver@mail.com
 
 For the sender password field, when using gmail, generate a google app password.<br>
 Instructions can be found here: https://support.google.com/accounts/answer/185833
