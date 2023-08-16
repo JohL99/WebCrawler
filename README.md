@@ -20,8 +20,7 @@ Instructions can be found here: https://support.google.com/accounts/answer/18583
 
 ## Requirements
 
-1. python
-2. pip
+1. docker
 
 ## Sample launch.json
 
